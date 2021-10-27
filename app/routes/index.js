@@ -7,7 +7,6 @@ import {useTheme} from 'react-native-paper';
 
 import HomeScreen from 'view/pages/home';
 
-
 const Stack = createStackNavigator();
 
 const Router = () => {
@@ -16,7 +15,7 @@ const Router = () => {
 
   return (
     <NavigationContainer theme={navigationTheme}>
-      <Stack.Navigator headerMode="none">
+      <Stack.Navigator>
         <Stack.Screen name="Home" component={HomeScreen} />
       </Stack.Navigator>
     </NavigationContainer>
