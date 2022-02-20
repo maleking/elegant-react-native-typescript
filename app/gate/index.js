@@ -10,23 +10,9 @@ const methods = {
 
 const auth = {
   checkMe: () => api.get('check/me'),
-  checkUser: () => api.get('check/user'),
-  checkVer: () => api.get('check/ver'),
-
-  signIn: (data) => api.post('sign-in', data),
-  signInConfirmation: (data) => api.post('sign-in-confirmation', data),
-
-  signOut: () => api.signOut('sign-out'),
-
-  signUp: (data) => api.post('sign-up', data),
-  signUpConfirmation: (data) => api.post('sign-up-confirmation', data),
 };
 
 export default {
-  getRepositories: (query) =>
-    api.get(`/search/repositories?q=${query}&sort=stars`, {}),
-  // any: someId => api.get(`/any/${someId}`),
-  // any: data => api.post('/any', data),
 
   ...methods,
   ...auth,
